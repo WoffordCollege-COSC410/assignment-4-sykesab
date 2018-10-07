@@ -16,6 +16,15 @@ public class ConsoleMain {
 			int row = keyboard.nextInt();
 			int col = keyboard.nextInt();
 			board.setMarkAt(row, col);
+			System.out.println(board);
+		}
+		TicTacToeModel.Result gameResult = board.getResult();
+		if (gameResult == TicTacToeModel.Result.XWIN) {
+			System.out.println("X wins.");
+		} else if (gameResult == TicTacToeModel.Result.OWIN) {
+			System.out.println("O wins.");
+		} else {
+			System.out.println("Game is a tie.");
 		}
 	}
 
