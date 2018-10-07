@@ -56,7 +56,7 @@ public class GuiMain extends JFrame implements ActionListener {
 
         board = new TicTacToeModel();
 
-        setLayout(new GridLayout(4, 4));
+        setLayout(new GridLayout(4, 3));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         location00 = new JButton("");
@@ -89,6 +89,12 @@ public class GuiMain extends JFrame implements ActionListener {
         location21.addActionListener(this);
         location22.addActionListener(this);
 
+        result = new JLabel("", JLabel.CENTER);
+        result.setName("result");
+        add(new JLabel());
+        add(result);
+        add(new JLabel());
+
         add(location00);
         add(location01);
         add(location02);
@@ -98,12 +104,6 @@ public class GuiMain extends JFrame implements ActionListener {
         add(location20);
         add(location21);
         add(location22);
-
-        // This is just to get the result label in the center of the grid because it looks better that way
-        add(new JLabel());
-
-        result = new JLabel("", JLabel.CENTER);
-        add(result);
 
         pack();
     }

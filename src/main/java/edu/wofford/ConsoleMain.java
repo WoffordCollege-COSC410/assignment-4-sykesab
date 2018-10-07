@@ -20,11 +20,11 @@ public class ConsoleMain {
 		}
 		TicTacToeModel.Result gameResult = board.getResult();
 		if (gameResult == TicTacToeModel.Result.XWIN) {
-			System.out.println("X wins.");
+			System.out.println("X wins");
 		} else if (gameResult == TicTacToeModel.Result.OWIN) {
-			System.out.println("O wins.");
+			System.out.println("O wins");
 		} else {
-			System.out.println("Game is a tie.");
+			System.out.println("Tie");
 		}
 	}
 
